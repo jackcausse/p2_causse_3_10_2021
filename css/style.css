@@ -1,22 +1,50 @@
-police{
-  font-family: 'Raleway', sans-serif;
+body{
+  font-family: "Raleway", sans serif;
 }
 
-*, *:before, *after{
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box; 
- } 
+body{
+  display: block;
+  margin: 8px;
+}
 
+/*images*/
+img {
+  max-width: 100%;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/*header*/
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+nav .header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px
+}
+/*titres*/
+h1 h2 h3 {
+  font-weight: bold;
+  color: black
+}
+
+h2{
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
 
 /*formulaire de recherche*/
-#search{
+#search {
   display: flex;
   align-items: center;
 }
@@ -25,7 +53,10 @@ header {
   border: 0;
   border-radius: 0 1rem 1rem 0;
   background-color: #0065FC;
+  
   color: white;
+  font-weight: bold; 
+  height:36px;
 }
 
 .filtres{
@@ -35,14 +66,45 @@ header {
 }
 
 /*hebergement*/
-
-.img {
-  max-width: 100%;
+#marseille {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  grid-gap: 30px;
 }
 
+#marseille .hebergements {
+  background-color: #cfcfcf;
+  border-radius:30px;
+}
+
+#marseille .populaires {
+  background-color: #cfcfcf;
+  border-radius: 30px;
+}
+
+#marseille .hebergements .vignettes {
+  display: grid;
+  grid-template-columns: 5fr 5fr;
+  grid-gap: 30px;
+}
+
+/*activites*/
+#activites {
+   
+}
+.activites {
+  
+}
+.activites .vignettes {
+  display: grid;
+ 
+}
+
+
+/*vignettes*/
 .vignettes {
   display: grid;
-  grid-template-columns: reapeat(4, 1fr);
+  grid-template-columns: reapeat(3, 1fr);
   grid-gap: 1.5rem;
 }
 
@@ -51,6 +113,7 @@ header {
   text-align: center;
   border: 1px solid #cfcfcf;
   border-radius: 1.5rem;
+  background-color: white;
 }
 
 .vignettes .vignette .nuit {
@@ -63,17 +126,11 @@ header {
   font-weight: bold;
 }
 
-
-h1, h2, h3 {
-  font-weight: bold;
-  color: black
-}
-
 /*footer*/
 footer{
   display: flex;
   flex-wrap;
   justify-content: space-between;
-  background: (#F2F2F2)
-  
+  background-color: (#F2F2F2)
+  padding: 2.2rem 0 1.5rem 0;
 }
