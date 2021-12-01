@@ -1,20 +1,31 @@
+/*body*/
 body{
   font-family: "Raleway", sans serif;
 }
 
-body{
-  display: block;
-  margin: 8px;
+#bloc-page {
+  max-width: 1330px;
+  margin: 0 auto;
+ 
 }
 
 /*images*/
 img {
-  max-width: 100%;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+  max-width: 100%
 }
 
+ #marseille .hebergements img {
+  border-radius: 10px 10px 0 0; 
+ }
+
+ #marseille .populaires img {
+  border-radius:10px 0px 0px 10px;
+ }
+
+#activites img{
+  border-radius: 10px 10px 0 0px; 
+}
+/* couleurs de la charte: #0065FC bleu, #DEEBFF bleu plus clair, #F2F2F2 gris pour le fond.*/
 /*header*/
 header {
   display: flex;
@@ -22,16 +33,37 @@ header {
   align-items: center;
 }
 
-nav .header{
+header a {
+  padding: 40px 0px 0px  15px;
+}
+
+header nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 3px
 }
+
+header nav a {
+  margin: 0 15px;
+  padding: 30px 15px 0 15px;
+  text-decoration: none;
+  color: (#F2F2F2);
+  border-top: 3px solid white;
+}
+
+header nav a {
+  color:(#F2F2F2);
+  border-color: (#0065FC);
+ }
+
+header img{
+  height: 50px;
+}
+
 /*titres*/
 h1 h2 h3 {
   font-weight: bold;
-  color: black
+  color: black;
 }
 
 h2{
@@ -43,29 +75,87 @@ h2{
   margin-inline-end: 0px;
 }
 
+/*a*/
+a{
+  color: black;
+  text-decoration: none;
+  border-top: 3px solid (#F2F2F2); 
+}
+
 /*formulaire de recherche*/
-#search {
+
+/*search*/
+#recherche .search {
   display: flex;
   align-items: center;
+  height: 40px; 
+  padding-left: 10px;
 }
 
-.button {
-  border: 0;
+#recherche .search .map_marker{
+  padding: 15px;
+  background-color: #cfcfcf;
+  border-radius: 1rem 0 0 1rem;
+}
+
+#recherche .search .button a {
   border-radius: 0 1rem 1rem 0;
   background-color: #0065FC;
-  
   color: white;
   font-weight: bold; 
-  height:36px;
+  text-decoration: none;
+  color: (#F2F2F2);
+  border-top: 3px solid white;
+  padding: 15px;
 }
 
-.filtres{
+#recherche .search form {
+  padding: 12px;
+  border-top: 1px solid #DEEBFF;
+  border-bottom:1px solid #DEEBFF;
+   text-decoration: none;
+}
+
+/*filtres*/
+#recherche .filtres {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
 }
 
-/*hebergement*/
+#recherche .filtres .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog   {
+  color: #0065FC ;
+  border-radius: 50px;
+   padding: 10px; 
+   background-color:#DEEBFF ;
+}
+
+#recherche .filtres strong  {
+  border-top: 1px solid #DEEBFF;
+  border-bottom: 1px solid #DEEBFF;
+  border-right: 1px solid #DEEBFF;
+  border-radius: 0 50px 50px 0;
+  padding: 8px 13px 8px 30px;
+  margin-left: -24px;
+}
+
+
+/*info*/
+#recherche .info{
+  padding-left: 5px;
+}
+
+#recherche .info p .fa-info-circle {
+    color: white;
+    border: 1px solid #cfcfcf;
+    background-color:#0065FC ;
+    border-radius: 50%;
+}
+
+/*hebergemens*/
 #marseille {
   display: grid;
   grid-template-columns: 7fr 3fr;
@@ -73,33 +163,48 @@ h2{
 }
 
 #marseille .hebergements {
+  padding: 30px;
   background-color: #cfcfcf;
-  border-radius:30px;
-}
-
-#marseille .populaires {
-  background-color: #cfcfcf;
-  border-radius: 30px;
+  
 }
 
 #marseille .hebergements .vignettes {
   display: grid;
-  grid-template-columns: 5fr 5fr;
-  grid-gap: 30px;
+  grid-template-columns: 3.33fr 3.33fr 3.33fr;
 }
+
+/*populaires*/
+#marseille .populaires { 
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  background-color: #cfcfcf
+}
+
+#marseille .populaires .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#marseille .populaires .vignettes .vignette {
+   display: grid;
+ grid-template-columns: 5fr 6fr;
+ }
+ 
 
 /*activites*/
 #activites {
-   
-}
-.activites {
+  padding: 30%;
+} 
+
+ .activites {
+  display: flex;
   
 }
-.activites .vignettes {
-  display: grid;
- 
-}
-
 
 /*vignettes*/
 .vignettes {
@@ -125,12 +230,56 @@ h2{
   color: #0d0e0d;
   font-weight: bold;
 }
+.vignettes .vignette figure {
+  margin: 0;
+}
+.vignettes .vignette .fa-star .grey {
+  color: (#F2F2F2);
+}
 
+.vignettes .vignette .fa-star {
+  color: blue;
+} 
+
+.vignettes .vignette figure img {
+  border-top-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
 /*footer*/
-footer{
+footer {
   display: flex;
-  flex-wrap;
   justify-content: space-between;
-  background-color: (#F2F2F2)
+  background-color: (#F2F2F2);
   padding: 2.2rem 0 1.5rem 0;
+  
+}
+
+footer h3 {
+  font-size: 16px;
+  margin: 0 0px;
+  
+}
+
+footer ul {
+  padding-left: 0px;
+ 
+}
+
+footer li {
+  list-style-type: none;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+ 
+}
+
+footer .assistance {
+  margin-right: 450px
+}
+
+footer a {
+  
+  text-decoration: none;
+  border-top: 3px solid (#F2F2F2) 
+ 
 }
