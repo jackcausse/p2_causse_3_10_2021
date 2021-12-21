@@ -1,6 +1,6 @@
 /*body*/
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
 }
 
 #bloc_page {
@@ -22,12 +22,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 0.5px;
+  padding-right: 0.5px;
 }
 
 header img {
-  height: 50px;
+  width: 70%;
 }
 
 header a {
@@ -56,34 +56,12 @@ header nav a:hover {
 
 header a img {
   height: 50px;
-  padding-left: 20px;
   border-top: 3px solid #ffffff;
-}
-
-header img:hover {
-  color: #deebff;
-  border-color: #0065fc;
 }
 
 /*titres*/
 h1 {
-  padding-left: 30px;
   font-size: 18px;
-}
-
-h1,
-p {
-  padding-left: 40px;
-}
-
-h1,
-h2,
-h3,
-.filtres p,
-p a {
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
 }
 
 h2 {
@@ -94,8 +72,16 @@ h3 {
   font-size: 14px;
 }
 
-h3 a:hover {
-  color: #0065fc;
+p .nuit .prix {
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
 
 /*a*/
@@ -107,8 +93,6 @@ a {
 /*formulaire de recherche*/
 #recherche .search form {
   display: flex;
-  padding: 1.5rem;
-  padding-left: 2.5rem;
 }
 
 #recherche .search form label {
@@ -118,13 +102,18 @@ a {
   border-bottom-left-radius: 0.5rem;
 }
 
+#recherche .search form label i {
+  font-size: 14px;
+}
+
 #recherche .search form input {
   padding: 0.5rem;
   border: none;
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+  color: black;
 }
 
 #recherche .search form button {
@@ -142,6 +131,9 @@ a {
 #recherche .filtrer {
   display: flex;
   align-items: center;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #recherche .filtrer > p {
@@ -157,7 +149,7 @@ a {
 #recherche .filtrer .filtres .filtre {
   display: flex;
   align-items: center;
-  margin: 0.1rem;
+  margin: 0 1rem;
   border: 2px solid #f2f2f2;
   border-radius: 1.5rem;
 }
@@ -165,14 +157,25 @@ a {
 #recherche .filtrer .filtres .filtre .icone {
   padding: 0.5rem;
   background-color: #deebff;
-  border-radius: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 18px;
+  height: 18px;
+  font-size: 20px;
+  margin: 0 5px 0 0;
+  color: #0065fc;
 }
-
+#recherche .filtrer .filtres .filtre .icone {
+  font-size: 15px;
+}
 #recherche .filtrer .filtres .filtre .text {
   margin: 0 0.5rem;
 }
 
-#recherche .filtrer .filtres .filtre .text:hover {
+#recherche .filtrer .filtres .filtre:hover {
   color: #0065fc;
   background-color: #deebff;
 }
@@ -184,9 +187,9 @@ a {
   font-size: 1rem;
   margin-top: 0.3rem;
   margin-bottom: 1.25rem;
-  padding-left: 2.5rem;
-  letter-spacing: px;
-  margin-right: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  gap: 10px;
 }
 
 #recherche .info .info_circle {
@@ -199,12 +202,8 @@ a {
   width: 18px;
   height: 18px;
   margin: 0 5px 0 0;
-  color: #f2f2f2;
+  color: white;
   background-color: #0065fc;
-}
-
-#recherche .info p {
-  margin-right: 10px;
 }
 
 /*hebergemens*/
@@ -212,8 +211,6 @@ a {
   display: grid;
   grid-template-columns: 7fr 3fr;
   grid-gap: 30px;
-  padding-left: 30px;
-  padding-right: 19px;
 }
 
 #marseille .hebergements {
@@ -231,41 +228,28 @@ a {
 
 #marseille .hebergements h2 {
   padding-left: 35px;
+  padding-right: 35px;
 }
 
-#marseille .hebergements .vignettes .vignette .auberge {
+#marseille .hebergements .vignettes .vignette .auberge,
+.port,
+.mouettes,
+.mer,
+.panier,
+.hamina {
   width: 100%;
   height: 100px;
+  object-fit: cover;
 }
 
-#marseille .hebergements .vignettes .vignette .port {
-  width: 100%;
-  height: 100px;
-}
-
-#marseille .hebergements .vignettes .vignette .mouettes {
-  width: 100%;
-  height: 100px;
-}
-
-#marseille .hebergements .vignettes .vignette .mer {
-  width: 100%;
-  height: 100px;
-}
-
-#marseille .hebergements .vignettes .vignette .panier {
-  width: 100%;
-  height: 100px;
-}
-
-#marseille .hebergements .vignettes .vignette .hamina {
-  width: 100%;
-  height: 100px;
+#marseille .hebergements .vignettes .vignette p {
+  font-size: 12px;
 }
 
 #marseille .hebergements .afficher {
   padding-top: 1rem;
   padding-left: 1.9rem;
+  font-weight: bold;
 }
 
 #marseille .hebergements .afficher a:hover {
@@ -277,48 +261,44 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
+  gap: 70px;
 }
 
 #marseille .populaires .h2_populaires i {
   font-size: 14px;
-  padding-left: 58px;
 }
 
 #marseille .populaires {
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  align-items: center;
   background-color: #f2f2f2;
   border-radius: 1.5rem;
 }
 
 #marseille .populaires .vignettes .vignette {
-  display: flex;
-  text-align: center;
-  align-items: center;
+ 
   margin: 30px;
+  width: 80%; 
+  height: 110px;
+}
+
+#marseille .populaires .vignettes .vignette .clic  {
+  display: flex;
+}
+
+#marseille .populaires .vignettes .vignette .clic figure img {
+  border-radius: 24px 0px 0px 24px; 
+  width: 80%;
+  height: 105px;
+  object-fit: cover;
+}
+
+#marseille .populaires .vignettes .vignette .clic figure .soleil {
   width: 80%;
 }
 
-#marseille .populaires .vignettes .vignette figure img {
-  border-radius: 1.5rem 0 0 1.5rem;
-}
-
-#marseille .populaires .vignettes .vignette .soleil {
-  width: 100%;
-  height: 100px;
-}
-
-#marseille .populaires .vignettes .vignette .au_coeur {
-  width: 120%;
-  height: 100px;
-}
-
-#marseille .populaires .vignettes .vignette .bleu {
-  width: 100%;
-  height: 100px;
+#marseille .populaires .vignettes .vignette a .hotel p {
+  font-size: 12px;
 }
 
 #marseille .vignettes .vignette i {
@@ -331,8 +311,6 @@ a {
 
 /*activites*/
 #activites {
-  padding-left: 20px;
-  padding-right: 20px;
   margin-top: 30px;
   margin-bottom: 60px;
 }
@@ -353,62 +331,85 @@ a {
   grid-row: 1/3;
 }
 
-#activites .vignettes .vignette .vieux_port,
+#activites .vignettes .vignette .double,
+.vieux_port,
 .parc_national_des_calanques {
   width: 100%;
-  height: 250px;
-}
-#activites .vignettes .vignette .notre_dame {
-  width: 100%;
-  height: 80px;
+  height: 280px;
+  object-fit: cover;
 }
 
 #activites .vignettes .vignette .fort_de_pomegues {
   width: 100%;
-  height: 80px;
+  height: 110px;
+  object-fit: cover;
+}
+
+#activites .vignettes .vignette .iles {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+#activites .vignettes .vignette .notre_dame {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
 }
 
 #activites .vignettes .vignette .parc_longchamp {
   width: 100%;
-  height: 80px;
-}
-#activites .vignettes .vignette .iles {
-  width: 100%;
-  height: 50px;
+  height: 100px;
+  object-fit: cover;
 }
 
 #activites h2 {
   margin-left: 8px;
 }
 
-#activites .vignettes .vignette h3 {
-  padding-left: 15px;
-}
-
 /*vignettes*/
 .vignettes .vignette {
-  text-align: center;
   border-radius: 1.5rem;
   background-color: white;
-  box-shadow: 4px 4px 11px -6px;
+  box-shadow: 4px 4px 4px -6px;
   width: 100%;
+}
+
+.vignettes .vignette:hover {
+  color: #0065fc;
+  background-color: #deebff;
+}
+
+.vignettes .vignette h3,
+.vignettes .vignette p,
+.vignettes .vignette strong,
+.vignettes .vignette .stars {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .vignettes .vignette .nuit {
   font-size: 0.9rem;
-  color: #333333;
+  color: black;
 }
 
 .vignettes .vignette .prix {
-  color: #0d0e0d;
+  color: black;
   font-weight: bold;
   font-size: 0.9rem;
 }
+/*.vignettes .vignette .lien .nuit {
+  word-spacing:-100%;
+  word-spacing: -0.5ch;
+}*/
 
 .vignettes .vignette figure {
   margin: 3px;
 }
 
+#marseille .hebergements,
+.activites,
 .vignettes .vignette figure img {
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
@@ -429,10 +430,12 @@ footer {
 footer h3 {
   font-size: 16px;
   margin: 0 0px;
+  color: black;
 }
 
 footer ul {
   padding-left: 0px;
+  padding-right: 0px;
 }
 
 footer li {
