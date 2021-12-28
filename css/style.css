@@ -276,25 +276,35 @@ a {
 }
 
 #marseille .populaires .vignettes .vignette {
- 
+  width: auto;
+  height: auto;
   margin: 30px;
-  width: 80%; 
-  height: 110px;
 }
 
-#marseille .populaires .vignettes .vignette .clic  {
-  display: flex;
+#marseille .populaires .vignettes .vignette .clic {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
 }
 
 #marseille .populaires .vignettes .vignette .clic figure img {
-  border-radius: 24px 0px 0px 24px; 
-  width: 80%;
+  border-radius: 24px 0px 0px 24px;
+  width: 100%;
+  display: block;
   height: 105px;
   object-fit: cover;
 }
 
-#marseille .populaires .vignettes .vignette .clic figure .soleil {
-  width: 80%;
+#marseille .populaires .vignettes .vignette .clic .hotel {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#marseille .populaires .vignettes .vignette .clic .hotel h3,
+#marseille .populaires .vignettes .vignette .clic .hotel p,
+#marseille .populaires .vignettes .vignette .clic .hotel .stars {
+  margin: 0;
 }
 
 #marseille .populaires .vignettes .vignette a .hotel p {
@@ -399,10 +409,6 @@ a {
   font-weight: bold;
   font-size: 0.9rem;
 }
-/*.vignettes .vignette .lien .nuit {
-  word-spacing:-100%;
-  word-spacing: -0.5ch;
-}*/
 
 .vignettes .vignette figure {
   margin: 3px;
@@ -470,10 +476,71 @@ ul li a:hover {
   #bloc_page {
     max-width: 668px;
   }
+
+  #recherche .filtrer .filtres {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  #marseille {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  footer {
+    gap: 50px;
+  }
 }
 
 @media (max-width: 767px) {
   #bloc_page {
     max-width: 260px;
+    margin: 0 auto;
   }
+
+  header .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header img {
+    padding-top: 5px;
+  }
+
+  #recherche .search form {
+    display: flex;
+    flex-direction: column;
+  }
+.filtrer {
+  flex-direction: column; 
+}
+  .filtrer .filtres .filtre {display: flex;
+    flex-direction: column;
+  }
+
+  .filtrer p {
+    padding-bottom: 15px;
+  }
+
+  #recherche .info { 
+  flex-direction: column
+  }
+
+  #marseille .hebergements .vignettes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #activites .vignettes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {display: flex;
+    flex-direction: column;
+  }
+
+  
+
 }
