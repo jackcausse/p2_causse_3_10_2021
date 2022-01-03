@@ -18,7 +18,7 @@ img {
  #F2F2F2 gris pour le fond.*/
 
 /*header*/
-header {
+header .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,12 +27,10 @@ header {
 }
 
 header img {
-  width: 70%;
-}
-
-header a {
-  padding: 40px 0px 0px 15px;
-  font-size: 14px;
+  height: 50%;
+  display: block;
+  padding: 0 15px;
+  /*width: 40%;*/
 }
 
 header nav {
@@ -43,20 +41,16 @@ header nav {
 
 header nav a {
   margin: 0 15px;
-  padding: 30px 15px 0 15px;
+  padding: 30px 15px 0;
+  font-size: 14px;
   text-decoration: none;
   border-top: 3px solid #ffffff;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 header nav a:hover {
   color: #0065fc;
   border-color: #0065fc;
-}
-
-header a img {
-  height: 50px;
-  border-top: 3px solid #ffffff;
 }
 
 /*titres*/
@@ -72,7 +66,7 @@ h3 {
   font-size: 14px;
 }
 
-p .nuit .prix {
+#marseille .hebergements .activites .nuit .prix {
   font-size: 20px;
 }
 
@@ -86,6 +80,7 @@ h3 {
 
 /*a*/
 a {
+  font-size: 14px;
   color: black;
   text-decoration: none;
 }
@@ -125,6 +120,10 @@ a {
   border-bottom-right-radius: 0.5rem;
   cursor: pointer;
   font-weight: bold;
+}
+
+#recherche .search form button i {
+  display: none;
 }
 
 /*filtres*/
@@ -168,9 +167,11 @@ a {
   margin: 0 5px 0 0;
   color: #0065fc;
 }
+
 #recherche .filtrer .filtres .filtre .icone {
   font-size: 15px;
 }
+
 #recherche .filtrer .filtres .filtre .text {
   margin: 0 0.5rem;
 }
@@ -187,8 +188,7 @@ a {
   font-size: 1rem;
   margin-top: 0.3rem;
   margin-bottom: 1.25rem;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 0.5rem;
   gap: 10px;
 }
 
@@ -227,8 +227,8 @@ a {
 }
 
 #marseille .hebergements h2 {
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 #marseille .hebergements .vignettes .vignette .auberge,
@@ -242,10 +242,6 @@ a {
   object-fit: cover;
 }
 
-#marseille .hebergements .vignettes .vignette p {
-  font-size: 12px;
-}
-
 #marseille .hebergements .afficher {
   padding-top: 1rem;
   padding-left: 1.9rem;
@@ -254,6 +250,13 @@ a {
 
 #marseille .hebergements .afficher a:hover {
   color: #0065fc;
+}
+
+#marseille .hebergements,
+.activites,
+.vignettes .vignette figure img {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 /*populaires*/
@@ -307,18 +310,6 @@ a {
   margin: 0;
 }
 
-#marseille .populaires .vignettes .vignette a .hotel p {
-  font-size: 12px;
-}
-
-#marseille .vignettes .vignette i {
-  color: #0065fc;
-}
-
-#marseille .vignettes .vignette i.grey {
-  color: #f2f2f2;
-}
-
 /*activites*/
 #activites {
   margin-top: 30px;
@@ -349,25 +340,10 @@ a {
   object-fit: cover;
 }
 
-#activites .vignettes .vignette .fort_de_pomegues {
-  width: 100%;
-  height: 110px;
-  object-fit: cover;
-}
-
-#activites .vignettes .vignette .iles {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-}
-
-#activites .vignettes .vignette .notre_dame {
-  width: 100%;
-  height: 110px;
-  object-fit: cover;
-}
-
-#activites .vignettes .vignette .parc_longchamp {
+#activites .vignettes .vignette .fort_de_pomegues,
+.iles,
+.notre_dame,
+.parc_longchamp {
   width: 100%;
   height: 100px;
   object-fit: cover;
@@ -400,7 +376,7 @@ a {
 }
 
 .vignettes .vignette .nuit {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: black;
 }
 
@@ -414,21 +390,19 @@ a {
   margin: 3px;
 }
 
-#marseille .hebergements,
-.activites,
-.vignettes .vignette figure img {
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
-
 .vignettes .vignette i {
   font-size: 10px;
+  color: #0065fc;
+}
+
+.vignettes .vignette i.grey {
+  color: #f2f2f2;
 }
 
 /*footer*/
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around; /*space-between*/
   background-color: #f2f2f2;
   padding: 2.2rem 0 1.5rem 0;
 }
@@ -449,14 +423,6 @@ footer li {
   font-size: 12px;
   font-weight: 400;
   margin-bottom: 10px;
-}
-
-footer .assistance {
-  margin-right: 250px;
-}
-
-footer .a_propos {
-  margin-left: 20px;
 }
 
 footer a {
@@ -494,11 +460,61 @@ ul li a:hover {
 }
 
 @media (max-width: 767px) {
-  #bloc_page {
-    max-width: 260px;
-    margin: 0 auto;
+  body {
+    margin: 0;
   }
 
+  #bloc_page {
+    max-width: none;
+    width: auto;
+  }
+  /*
+  h1,
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  header .header nav a {
+    font-size: 18px;
+  }
+
+  #recherche .info p,
+  
+  #marseille .hebergements .afficher a {
+    font-size: 16px;
+  }
+
+  #recherche .filtrer p,
+  #marseille .hebergements .afficher a {
+    font-size: 18px;
+  }
+
+  .vignettes .vignette .nuit {
+    font-size: 0.9rem;
+  }
+
+  .vignettes .vignette i {
+    font-size: 0.7rem;
+  }
+
+  #marseille .populaires .h2_populaires i {
+    font-size: 22px;
+  }
+
+  footer .footer a {
+    font-size: 16px;
+  }
+
+  footer h3 {
+    font-size: 18px;
+  }
+*/
+
+  /*header*/
   header .header {
     display: flex;
     flex-direction: column;
@@ -508,23 +524,84 @@ ul li a:hover {
     padding-top: 5px;
   }
 
-  #recherche .search form {
-    display: flex;
-    flex-direction: column;
-  }
-.filtrer {
-  flex-direction: column; 
-}
-  .filtrer .filtres .filtre {display: flex;
-    flex-direction: column;
+  header nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 
-  .filtrer p {
+  header nav a {
+    margin: 0;
+    padding: 0 15px 30px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    border-top: none;
+    border-bottom: 3px solid #f2f2f2;
+    margin-top: 30px;
+  }
+
+  /*recherche*/
+  #recherche {
+    padding: 0 15px;
+  }
+
+  #recherche .search form {
+    display: block;
+    text-align: center;
+  }
+
+  #recherche .search form button {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    margin-left: -10px;
+    padding: 0.7rem;
+  }
+
+  #recherche .search form button span {
+    display: none;
+  }
+
+  #recherche .search button i {
+    display: inline;
+  }
+
+  /*filtres*/
+  #recherche .filtrer {
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  #recherche .filtrer .filtres {
+    display: block;
+    width: 100%;
+  }
+
+  #recherche .filtrer .filtres .filtre {
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+  }
+
+  #recherche .filtrer .filtres .filtres text {
+    width: 100%;
+    text-align: center;
+  }
+
+  #recherche .filtrer p {
     padding-bottom: 15px;
   }
 
-  #recherche .info { 
-  flex-direction: column
+  /*info*/
+  #recherche .info {
+    gap: 0;
+  }
+
+  /*hebergements*/
+  #marseille .hebergements {
+    background-color: white;
+    border-radius: 0 0 0 0;
   }
 
   #marseille .hebergements .vignettes {
@@ -532,15 +609,43 @@ ul li a:hover {
     flex-direction: column;
   }
 
+  /*populaires*/
+  #marseille .populaires {
+    border-radius: 0;
+  }
+
+  #marseille .populaires .h2_populaires {
+    gap: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*activites*/
+  #activites h2 {
+    margin-left: 30px;
+  }
+
+  #activites .vignettes .vignette .double,
+  .vieux_port,
+  .parc_national_des_calanques {
+    height: 100px;
+    object-fit: cover;
+  }
+
   #activites .vignettes {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+  }
+  /*footer*/
+  footer {
     display: flex;
     flex-direction: column;
   }
 
-  footer {display: flex;
-    flex-direction: column;
+  footer .footer {
+    margin-left: 30px;
+    margin-right: 30px;
   }
-
-  
-
 }
